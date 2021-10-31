@@ -1,4 +1,4 @@
-# Specyfikacja wymagań projektu - Sklep Pajonatów Fantastyki
+# Specyfikacja wymagań projektu - Sklep Pasjonatów Fantastyki
 
 ## Spis treści:
 - [Specyfikacja wymagań projektu - Sklep Pajonatów Fantastyki](#specyfikacja-wymagań-projektu---sklep-pajonatów-fantastyki)
@@ -34,6 +34,7 @@ Specyfikacja ta ma na celu przedstawienie funkcji i technologii wykorzystanej do
 | Wersja    | Zmiany                             |
 |-----------|------------------------------------|
 |  v.1.0.0  | Utworzenie tej specyfikacji        |
+|  v.1.0.1  | Poprawa nazwy specyfikacji       | 
 
 ### Słownik Pojęć:
 
