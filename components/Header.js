@@ -11,6 +11,7 @@ const kategorie = [
     { id: 3, name: 'Lorem ipsum'},
     { id: 4, name: 'Lorem ipsum'},
     { id: 5, name: 'Lorem ipsum' },
+    { id: 6, name: 'Lorem ipsum' },
   ]
 
 const Header = () => {
@@ -20,7 +21,7 @@ const Header = () => {
             <Link href="/"><a>
                 <Image src="/logo-right.svg" width ={256} height={128} />
             </a></Link>
-            <div className="searchBar inline-block">
+            <div className="inline-block">
             <input type="text" placeholder="Szukaj..." />
 
             <Listbox value={kategoria} onChange={setKategorie}>
@@ -42,7 +43,12 @@ const Header = () => {
           </div>
             <Link href="/"><a>Kontakt</a></Link>
             <Link href="/"><a>Twoje konto</a></Link>
-            <Link href="/"><a>Koszyk</a></Link>
+            <Link href="/"><a>Koszyk</a></Link> <br/>
+
+            {kategorie.map((kategoria) => (
+                    <h3 className="inline">{kategoria.name}</h3>  
+            ))}
+
         </nav>
     );
 }
