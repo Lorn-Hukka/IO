@@ -1,6 +1,6 @@
 import Head from 'next/head'
-// import Footer from './Footer'
-import Header from './Header'
+import Footer from './Footer'
+// import Header from './Header'
 // import Navbar from './Navbar'
 
 const Layout = ({ children }) => {
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
                 <title>Sagittarius - Twój sklep hobbystyczny.</title>
             </Head>
             <div className="flex flex-col min-h-screen overflow-hidden">
-                { <Header /> }
+                {/* <Header /> */}
                 <main className="flex-grow">
                     {children}
                 </main>
