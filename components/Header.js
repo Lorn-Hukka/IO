@@ -1,11 +1,20 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu } from '@headlessui/react'
+import { useState } from 'react'
+import { Listbox } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
 
+const kategorie = [
+    { id: 1, name: 'Wszystkie kategorie'},
+    { id: 2, name: 'Lorem ipsum'},
+    { id: 3, name: 'Lorem ipsum'},
+    { id: 4, name: 'Lorem ipsum'},
+    { id: 5, name: 'Lorem ipsum' },
+  ]
 
 const Header = () => {
+    const [kategoria, setKategorie] = useState(kategorie[0])
     return (  
         <nav> 
             <Link href="/"><a>
@@ -13,31 +22,23 @@ const Header = () => {
             </a></Link>
             <div className="searchBar inline-block">
             <input type="text" placeholder="Szukaj..." />
-            <Menu>
-            <Menu.Button>Kategorie  <ChevronDownIcon className="w-5 h-5 ml-2 -mr-1" /> </Menu.Button>
-            <Menu.Items>
-              <Menu.Item>
-                {({ active }) => (
-                  <a
-                    className={`${active && 'bg-blue-500'}`}
-                    href="/"
-                  >
-                    Lorem ipsum
-                  </a>
-                )}
-              </Menu.Item>
-              <Menu.Item>
-                {({ active }) => (
-                  <a
-                    className={`${active && 'bg-blue-500'}`}
-                    href="/"
-                  >
-                    Lorem ipsum
-                  </a>
-                )}
-              </Menu.Item>
-            </Menu.Items>
-          </Menu>
+
+            <Listbox value={kategoria} onChange={setKategorie}>
+                <Listbox.Button>{kategoria.name}
+                    <ChevronDownIcon className="w-5 h-5 ml-2 -mr-1" />
+                </Listbox.Button>
+                    <Listbox.Options>
+                        {kategorie.map((kategoria) => (
+                        <Listbox.Option
+                            key={kategoria.id}
+                            value={kategoria}
+                            disabled={kategoria.unavailable}
+                        >
+                            {kategoria.name}
+                        </Listbox.Option>
+                        ))}
+                    </Listbox.Options>
+                    </Listbox>
           </div>
             <Link href="/"><a>Kontakt</a></Link>
             <Link href="/"><a>Twoje konto</a></Link>
