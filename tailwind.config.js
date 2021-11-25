@@ -5,11 +5,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'primary': '#c8561a',
-        'secondary': '#f39c12',
-        'third': 'b4bcc2',
-        'forth': '#563700',
-        'fifth': '#e08e0b',
+        'primary': '#A67B92',
+        'secondary': '#544F73',
+        'third': '#1E3040',
+        'forth': '#060C0D',
+        'fifth': '#D99414',
       },
     },
     fontFamily: {
