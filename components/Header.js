@@ -24,22 +24,22 @@ const Header = () => {
             </a></Link>
             </div>
 
-            <div className="mx-12 md:mx-0 flex justify-between shadow-lg rounded-full">
+            <div className="mx-12 py-2 lg:py-0 md:mx-0 flex justify-between shadow rounded-full">
                 <input className ="outline-none rounded-full w-full pl-5" type="text" placeholder="Szukaj..." />
 
-                <button className="border-l">
+                <button className="border-l border-r">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mx-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
                 </button>
                 <div>
                     <Listbox value={selected} onChange={setSelected}>
                         <div className="relative">
-                        <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left bg-white rounded-full shadow-md cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500">
-                            <span className="block truncate">{selected.name}</span>
+                        <Listbox.Button className="text-sm relative w-full lg:py-2 pl-3 pr-10 text-left bg-white rounded-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500">
+                            <span className="lg:block truncate hidden">{selected.name}</span>
                             <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
                             <SelectorIcon
-                                className="w-5 h-5 text-gray-400"
+                                className="w-5 h-5 mb-3 lg:mb-0 text-gray-400"
                                 aria-hidden="true"
                             />
                             </span>
@@ -50,7 +50,7 @@ const Header = () => {
                             leaveFrom="opacity-100"
                             leaveTo="opacity-0"
                         >
-                            <Listbox.Options className="absolute w-100 py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none">
+                            <Listbox.Options className="text-sm absolute w-100 py-1 mt-1 overflow-auto bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none">
                             {kategorie.map((kategoria, kategoriaIdx) => (
                                 <Listbox.Option
                                 key={kategoriaIdx}
@@ -91,8 +91,12 @@ const Header = () => {
             </div>
                         <nav className="flex justify-center md:justify-start">
                             <Link href="/"><a className="flex items-center rounded-full mt-3 md:mt-0 md:ml-3 lg:ml-20 py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer text-primary border-primary border-2 hover:bg-primary hover:text-white transition ease-out duration-500">Kontakt</a></Link>
-                            <Link href="/"><a className="flex items-center text-center rounded-full mt-3 md:mt-0 mx-3 py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer text-primary border-primary border-2 hover:bg-primary hover:text-white transition ease-out duration-500">Twoje konto</a></Link>
-                            <Link href="/"><a className="flex items-center rounded-full mt-3 md:mt-0 py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer text-primary border-primary border-2 hover:bg-primary hover:text-white transition ease-out duration-500">Koszyk</a></Link>
+                            <Link href="/"><a className="flex items-center text-center rounded-full mt-3 md:mt-0 mx-3 py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer text-primary border-primary border-2 hover:bg-primary hover:text-white transition ease-out duration-500"><svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                                        </svg><span className="hidden lg:inline">Twoje konto</span></a></Link>
+                            <Link href="/"><a className="flex items-center rounded-full mt-3 md:mt-0 py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer text-primary border-primary border-2 hover:bg-primary hover:text-white transition ease-out duration-500"><svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                                        </svg><span className="hidden lg:inline">Koszyk</span></a></Link>
                         </nav>
 
                         
