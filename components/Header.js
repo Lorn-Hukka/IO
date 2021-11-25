@@ -36,8 +36,8 @@ const Header = () => {
                     <Listbox value={selected} onChange={setSelected}>
                         <div className="relative">
                         <Listbox.Button className="text-sm relative w-full lg:py-2 pl-3 pr-10 text-left bg-white rounded-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500">
-                            <span className="lg:block truncate hidden">{selected.name}</span>
-                            <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+                            <span className="truncate hidden lg:block">{selected.name}</span>
+                            <span className="absolute inset-y-0 right-0 flex items-center pr-2">
                             <SelectorIcon
                                 className="w-5 h-5 mb-3 lg:mb-0 text-gray-400"
                                 aria-hidden="true"
@@ -50,12 +50,12 @@ const Header = () => {
                             leaveFrom="opacity-100"
                             leaveTo="opacity-0"
                         >
-                            <Listbox.Options className="text-sm absolute w-100 py-1 mt-1 overflow-auto bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none">
-                            {kategorie.map((kategoria, kategoriaIdx) => (
+                            <Listbox.Options className="text-sm absolute w-100 py-1 mt-1 overflow-auto bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none right-1">
+                            {kategorie.map((kategoria) => (
                                 <Listbox.Option
-                                key={kategoriaIdx}
+                                key={kategoria.id}
                                 className={({ active }) =>
-                                    `${active ? 'text-primary-900 bg-primary-100' : 'text-gray-900'}
+                                    `${active ? 'text-gray-900 bg-gray-100' : 'text-gray-900'}
                                         cursor-pointer select-none relative py-2 pl-10 pr-4`
                                 }
                                 value={kategoria}
@@ -72,7 +72,7 @@ const Header = () => {
                                     {selected ? (
                                         <span
                                         className={`${
-                                            active ? 'text-primary-600' : 'text-primary-600'
+                                            active ? 'text-gray-900' : 'text-gray-900'
                                         }
                                                 absolute inset-y-0 left-0 flex items-center pl-3`}
                                         >
