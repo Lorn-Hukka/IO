@@ -3,8 +3,8 @@ import ProductCard from "@components/ProductCard"
 const Products = () => {
 
   let dummyData = [
-    {"slug": "podrecznik-darkherezy-ii", "name": "Podręcznik DarkHerezy II", "price": "213 zł", "thumbnail": "https://images.unsplash.com/photo-1524592094714-0f0654e20314?ixlib=rb-1.2.1&auto=format&fit=crop&w=689&q=80"},
-    {"slug": "zestaw-kosci-do-gry-hellman", "name": "Zestaw Kości do gry - HELLMAN", "price": "30 zł", "thumbnail": "https://images.unsplash.com/photo-1495856458515-0637185db551?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"},
+    {"slug": "podrecznik-darkherezy-ii", "name": "Podręcznik DarkHerezy II", "price": "179,00 zł", "thumbnail": "https://copcorp.pl/wp-content/uploads/2018/12/dh2-1.jpg"},
+    {"slug": "zestaw-kosci-do-gry-hellman", "name": "Zestaw Kości do gry - HELLMAN", "price": "30 zł", "thumbnail": "https://files.rebel.pl/products/107/5904/5382/5383/_2005372/0-1200x900-ffffff.jpg"},
   ];
 
   return (
@@ -24,11 +24,11 @@ const Products = () => {
           </div>
           <div className="flex justify-center">
             <div className="flex rounded-md mt-8">
-              <a href="#" className="py-2 px-4 leading-tight bg-white border border-gray-200 text-blue-700 border-r-0 ml-0 rounded-l hover:bg-blue-500 hover:text-white"><span>Previous</span></a>
-              <a href="#" className="py-2 px-4 leading-tight bg-white border border-gray-200 text-blue-700 border-r-0 hover:bg-blue-500 hover:text-white"><span>1</span></a>
-              <a href="#" className="py-2 px-4 leading-tight bg-white border border-gray-200 text-blue-700 border-r-0 hover:bg-blue-500 hover:text-white"><span>2</span></a>
-              <a href="#" className="py-2 px-4 leading-tight bg-white border border-gray-200 text-blue-700 border-r-0 hover:bg-blue-500 hover:text-white"><span>3</span></a>
-              <a href="#" className="py-2 px-4 leading-tight bg-white border border-gray-200 text-blue-700 rounded-r hover:bg-blue-500 hover:text-white"><span>Next</span></a>
+              <a href="#" className="py-2 px-4 leading-tight bg-white border border-gray-200 text-red-500 border-r-0 ml-0 rounded-l hover:bg-red-600 hover:text-white"><span>Previous</span></a>
+              <a href="#" className="py-2 px-4 leading-tight bg-white border border-gray-200 text-red-500 border-r-0 hover:bg-red-600 hover:text-white"><span>1</span></a>
+              <a href="#" className="py-2 px-4 leading-tight bg-white border border-gray-200 text-red-500 border-r-0 hover:bg-red-600 hover:text-white"><span>2</span></a>
+              <a href="#" className="py-2 px-4 leading-tight bg-white border border-gray-200 text-red-500 border-r-0 hover:bg-red-600 hover:text-white"><span>3</span></a>
+              <a href="#" className="py-2 px-4 leading-tight bg-white border border-gray-200 text-red-500 rounded-r hover:bg-red-600 hover:text-white"><span>Next</span></a>
             </div>
           </div>
         </div>
