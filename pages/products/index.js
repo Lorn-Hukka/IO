@@ -13,10 +13,14 @@ const Products = () => {
       <main className="my-8">
         <div className="container mx-auto px-6">
           <h3 className="text-gray-700 text-2xl font-medium">Nasze Produkty:</h3>
-          <span className="mt-3 text-sm text-gray-500">200+ Products</span>
+          <span className="mt-3 text-sm text-gray-500">{dummyData.length} Produktów</span>
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
-            <Product product={dummyData[0]} />
-            <Product product={dummyData[1]} />
+            {
+              dummyData && dummyData.map( product => (
+                <Product key={product.slug} product={product} />
+                )
+              )
+            }
           </div>
           <div className="flex justify-center">
             <div className="flex rounded-md mt-8">
