@@ -2,7 +2,10 @@ import Product from "@components/Product"
 
 const Products = () => {
 
-
+  let dummyData = [
+    {"slug": "podrecznik-darkherezy-ii", "name": "Podręcznik DarkHerezy II", "price": "213 zł", "thumbnail": "https://images.unsplash.com/photo-1524592094714-0f0654e20314?ixlib=rb-1.2.1&auto=format&fit=crop&w=689&q=80"},
+    {"slug": "zestaw-kosci-do-gry-hellman", "name": "Zestaw Kości do gry - HELLMAN", "price": "30 zł", "thumbnail": "https://images.unsplash.com/photo-1495856458515-0637185db551?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"},
+  ];
 
   return (
     <>
@@ -12,8 +15,8 @@ const Products = () => {
           <h3 className="text-gray-700 text-2xl font-medium">Nasze Produkty:</h3>
           <span className="mt-3 text-sm text-gray-500">200+ Products</span>
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
-            <Product  />
-            <Product  />
+            <Product product={dummyData[0]} />
+            <Product product={dummyData[1]} />
           </div>
           <div className="flex justify-center">
             <div className="flex rounded-md mt-8">
