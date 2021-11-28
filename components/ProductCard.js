@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Product = ({ product }) => {
+const ProductCard = ({ product }) => {
   return (
     <>
       <Link href={"/products/" + product.slug}>
@@ -22,4 +22,4 @@ const Product = ({ product }) => {
   );
 }
 
-export default Product;
+export default ProductCard;

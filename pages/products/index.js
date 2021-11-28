@@ -1,4 +1,4 @@
-import Product from "@components/Product"
+import ProductCard from "@components/ProductCard"
 
 const Products = () => {
 
@@ -17,7 +17,7 @@ const Products = () => {
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
             {
               dummyData && dummyData.map( product => (
-                <Product key={product.slug} product={product} />
+                <ProductCard key={product.slug} product={product} />
                 )
               )
             }
