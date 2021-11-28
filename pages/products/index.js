@@ -9,8 +9,7 @@ const Products = () => {
 
   return (
     <>
-      
-      <main className="my-8">
+      <div className="my-8">
         <div className="container mx-auto px-6">
           <h3 className="text-gray-700 text-2xl font-medium">Nasze Produkty:</h3>
           <span className="mt-3 text-sm text-gray-500">{dummyData.length} Produktów</span>
@@ -32,7 +31,7 @@ const Products = () => {
             </div>
           </div>
         </div>
-      </main>
+      </div>
       <hr className="my-3" />
     </>
   );
