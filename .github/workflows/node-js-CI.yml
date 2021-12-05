@@ -1,0 +1,42 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ development ]
+  pull_request:
+    branches: [ development ]
+
+jobs:
+  build:
+
+    runs-on: self-hosted
+
+    strategy:
+      matrix:
+        node-version: [17.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build --if-present
+    - name: Stop PM2 SERVICE
+      working-directory: /home/lorn
+      shell: bash
+      run: pm2 stop 4
+    - name: Remove Old version of app
+      working-directory: /home/lorn
+      shell: bash
+      run: rm -rf /home/lorn/IO
+    - name: Copy new version of app
+      shell: bash
+      run: cp -r ../IO.pl /home/lorn/
+    - name: Restart app
+      working-directory: /home/lorn
+      shell: bash
+      run: pm2 start 4
