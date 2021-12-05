@@ -30,7 +30,7 @@ const Header = () => {
           body: JSON.stringify(szukane)
     })}
     return (  
-        <div className="md:grid md:grid-cols-3 items-center z-50 shadow pb-2"> 
+        <div className="md:grid md:grid-cols-3 items-center z-50 shadow pb-4"> 
             <div className="flex justify-center lg:justify-end lg:mr-20">
             <Link href="/"><a>
                 <Image src="/logo-right.svg" width ={256} height={128} />
@@ -112,8 +112,8 @@ const Header = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
                                         </svg><span className="hidden lg:inline">Koszyk</span></a></Link>
             </nav>
-            <div className="flex justify-center items-center col-span-3">
-            <div className="rounded-full mt-3 md:mt-0 py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer text-third border-third border-2 hover:bg-third hover:text-white transition ease-out duration-500">
+            <div className="flex justify-center col-span-3 items-center">
+            <div className="rounded-full mt-3 md:-mt-7 py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer text-third border-third border-2 hover:bg-third hover:text-white transition ease-out duration-500">
             <Link href="/products"><a>
             Zobacz nasze produkty</a></Link>
             </div>
