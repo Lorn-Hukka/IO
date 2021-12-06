@@ -35,7 +35,7 @@ jobs:
       run: rm -rf /home/lorn/IO
     - name: Copy new version of app
       shell: bash
-      run: cp -r ../IO.pl /home/lorn/
+      run: cp -r ../IO /home/lorn/
     - name: Restart app
       working-directory: /home/lorn
       shell: bash
