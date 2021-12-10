@@ -8,15 +8,17 @@ export default function Home() {
   ];
 
   return (
-    <div className="container mx-auto">
-      <div className="container flex flex-wrap">
-        <div>
-          <h1 className="text-gray-900 text-2xl font-bold">O tej stronie</h1>
-          <span>Na naszej stronie znajdziesz wszystko co jest związane z grą w papierowe gry fantasy! <br/>
+      <div className="">
+        <div className="border-b-2">
+        <div className="px-6 py-10">
+          <h1 className="text-gray-700 text-2xl font-medium mb-2">O tej stronie</h1>
+          <span className="leading-relaxed">Na naszej stronie znajdziesz wszystko co jest związane z grą w papierowe gry fantasy! <br/>
           Wszystko co jest Ci potrzebne jesteś w stanie nabyć właśnie tu!</span>
         </div>
-        <div className="">
-          <h1 className="text-gray-900 text-2xl font-bold">Polecamy</h1>
+        </div>
+        <div className="border-b-2">
+        <div className="px-6 py-10">
+          <h1 className="text-gray-700 text-2xl font-medium">Polecamy</h1>
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
               {
                 dummyData && dummyData.map( product => (
@@ -26,8 +28,10 @@ export default function Home() {
               }
             </div>
           </div>
-          <div>
-            <h1 className="text-gray-900 text-2xl font-bold">Promocje</h1>
+          </div>
+          <div className="border-b-2">
+          <div className="px-6 py-10">
+            <h1 className="text-gray-700 text-2xl font-medium">Promocje</h1>
             <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
               {
                 dummyData && dummyData.map( product => (
@@ -37,7 +41,7 @@ export default function Home() {
               }
             </div>
           </div>
+          </div>
       </div> 
-    </div>
   )
 }
