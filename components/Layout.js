@@ -18,6 +18,7 @@ const Layout = ({ children }) => {
                             Planszówki, kostki, podręczniki do RPGów i wiele więcej.
                 ' />
                 <title>Sagittarius - Twój sklep hobbystyczny.</title>
+                <script src="https://kit.fontawesome.com/1585bf7ccb.js" crossorigin="anonymous"></script>
             </Head>
             <div className="flex flex-col min-h-screen overflow-hidden">
                 { <Header /> }
