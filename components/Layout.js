@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Footer from './Footer'
 import Header from './Header'
+import Script from 'next/script'
 // import Navbar from './Navbar'
 
 const Layout = ({ children }) => {
@@ -17,9 +18,9 @@ const Layout = ({ children }) => {
                             To tutaj dostaniesz wszystko co potrzebne do dobrej zabawy; 
                             Planszówki, kostki, podręczniki do RPGów i wiele więcej.
                 ' />
-                <title>Sagittarius - Twój sklep hobbystyczny.</title>
-                <script src="https://kit.fontawesome.com/1585bf7ccb.js" crossorigin="anonymous"></script>
+                <title>Sagittarius - Twój sklep hobbystyczny.</title>  
             </Head>
+            <Script src="https://kit.fontawesome.com/1585bf7ccb.js" crossOrigin="anonymous"></Script>
             <div className="flex flex-col min-h-screen overflow-hidden">
                 { <Header /> }
                 <main className="flex-grow">

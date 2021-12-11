@@ -33,7 +33,7 @@ const Header = () => {
         <div className="md:grid md:grid-cols-3 items-center z-50 shadow pb-4"> 
             <div className="flex justify-center lg:justify-end lg:mr-20">
             <Link href="/"><a>
-                <Image src="/logo-right.svg" width ={256} height={128} />
+                <Image src="/logo-right.svg" alt="logo" width ={256} height={128} />
             </a></Link>
             </div>
             
