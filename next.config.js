@@ -1,7 +1,8 @@
 module.exports = {
     images: {
       domains: [
-        'localhost'
+        'localhost',
+        'cms.io.lorned.net'
       ],
     },
     swcMinify: true,
