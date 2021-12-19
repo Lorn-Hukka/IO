@@ -1,3 +1,5 @@
+import { TrashIcon } from '@heroicons/react/outline'
+import { HeartIcon } from '@heroicons/react/outline'
 const CartItem = ({ product }) => {
     return ( 
         <div className="flex items-center">
@@ -8,10 +10,13 @@ const CartItem = ({ product }) => {
             <div>
                 {product.name}
             </div>
-                {product.price}
+                
             <div>
-
+                {product.price}
             </div>
+            <HeartIcon className="h-5 w-5"/>
+            <TrashIcon className="h-5 w-5"/>
+            
         </div>
      );
 }
