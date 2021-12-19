@@ -7,7 +7,7 @@ const ProductCard = ({ product }) => {
       <Link href={"/products/" + product.slug}>
         <a>
           <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-            <div className="flex items-end justify-end h-56 w-full bg-cover" style={{ backgroundImage: "url(" + product.thumbnail + ")" }}>
+            <div className="flex items-end justify-end h-56 w-full bg-cover" style={{ backgroundImage: "url(https://cms.io.lorned.net/" + product.images[0].url + ")" }}>
               <button className="p-2 rounded-full bg-red-600 text-white mx-5 -mb-4 hover:bg-red-500 focus:outline-none focus:bg-red-500">
                 <SearchIcon className="h-5 w-5" aria-hidden="true" />
                 {/* <svg className="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -16,8 +16,8 @@ const ProductCard = ({ product }) => {
               </button>
             </div>
             <div className="px-5 py-3">
-              <h3 className="text-gray-700 uppercase">{product.name}</h3>
-              <span className="text-gray-500 mt-2">{product.price}</span>
+              <h3 className="text-gray-700 uppercase">{product.title}</h3>
+              <span className="text-gray-500 mt-2">{product.price} zł</span>
             </div>
           </div>
         </a>
