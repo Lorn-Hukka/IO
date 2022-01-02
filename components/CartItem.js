@@ -12,10 +12,9 @@ const CartItem = ({ product }) => {
                 <span>
                     {product.title}
                 </span>
-            </div>
-                
+            </div> 
             <div className='m-3'>
-                {product.price}
+                {product.on_sale==true ? product.sale_price : product.price}
             
                 <HeartIcon className="my-1 h-5 w-5 hover:bg-gray-200 hover:cursor-pointer"/>
                 <TrashIcon className="my-1 h-5 w-5 hover:bg-gray-200 hover:cursor-pointer"/>

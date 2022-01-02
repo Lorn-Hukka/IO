@@ -16,7 +16,9 @@ const Cart = ({products}) => {
 
     let sum = 0;
     products && products.map(product => (
-        sum += parseInt(product.price)
+            sum += parseInt(product.on_sale==false ? product.price : product.sale_price)
+        
+       
     ));
       return (
         <div className="md:grid md:grid-cols-2">
