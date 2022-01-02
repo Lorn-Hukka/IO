@@ -6,11 +6,11 @@ const CartItem = ({ product }) => {
         <div className="grid grid-cols-2 justify-items-center">
             <div className='flex items-center'>
                 <div className='m-5'>
-                    <Image src="/logo.svg" alt="logo" width ={64} height={64} /> {/*placeholder*/}
+                    <Image src={"https://cms.io.lorned.net/" + product.images[0].url} alt="logo" width ={64} height={64} /> {/*placeholder*/}
                 </div>
 
                 <span>
-                    {product.name}
+                    {product.title}
                 </span>
             </div>
                 
