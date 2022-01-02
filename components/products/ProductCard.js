@@ -24,8 +24,7 @@ const ProductCard = ({ product }) => {
                   <span className="text-gray-500 mt-2">{product.price} zł</span>
                 :
                 <>
-                  <span className="text-gray-500 mt-2 line-through">{product.price} zł</span>  
-                  <br/>   
+                  <span className="text-gray-500 mt-2 line-through">{product.price} zł </span> &nbsp;
                   <span className="text-gray-900 mt-2">{product.sale_price} zł</span>
                 </>
 
