@@ -17,7 +17,18 @@ const ProductCard = ({ product }) => {
             </div>
             <div className="px-5 py-3">
               <h3 className="text-gray-700 uppercase">{product.title}</h3>
-              <span className="text-gray-500 mt-2">{product.price} zł</span>
+              {
+                product.on_sale == true ? 
+                  <span className="text-gray-500 mt-2">{product.price} zł</span>
+                :
+                <>
+                  <span className="text-gray-500 mt-2 line-through">{product.price} zł</span>  
+                  <br/>   
+                  <span className="text-gray-900 mt-2">{product.sale_price} zł</span>
+                </>
+
+          
+              }
             </div>
           </div>
         </a>
