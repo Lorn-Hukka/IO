@@ -2,6 +2,8 @@ import Link from "next/link";
 import { SearchIcon } from '@heroicons/react/outline'
 
 const ProductCard = ({ product }) => {
+  console.log(product.on_sale);
+  console.log(product.title);
   return (
     <>
       <Link href={"/products/" + product.slug}>
@@ -18,7 +20,7 @@ const ProductCard = ({ product }) => {
             <div className="px-5 py-3">
               <h3 className="text-gray-700 uppercase">{product.title}</h3>
               {
-                product.on_sale == true ? 
+                product.on_sale == false ? 
                   <span className="text-gray-500 mt-2">{product.price} zł</span>
                 :
                 <>
