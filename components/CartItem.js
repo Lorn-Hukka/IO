@@ -9,9 +9,9 @@ const CartItem = ({ product }) => {
                     <Image src="/logo.svg" alt="logo" width ={64} height={64} /> {/*placeholder*/}
                 </div>
 
-                <div className=''>
+                <span>
                     {product.name}
-                </div>
+                </span>
             </div>
                 
             <div className='m-3'>
