@@ -2,8 +2,6 @@ import Link from "next/link";
 import { SearchIcon } from '@heroicons/react/outline'
 
 const ProductCard = ({ product }) => {
-  console.log(product.on_sale);
-  console.log(product.title);
   return (
     <>
       <Link href={"/products/" + product.slug}>
