@@ -1,19 +1,13 @@
 
 const { default: CartItem } = require("@components/CartItem");
-export async function getStaticProps(context) {
 
-    let res = await fetch("https://cms.io.lorned.net/products");
-    let products = await res.json();
-  
-    return {
-      props: {
-        products,
-      },
-      revalidate: 900
+
+const Cart = () => {
+  let products = []
+  if (typeof window !== 'undefined')
+    {
+    products = JSON.parse(localStorage.getItem('Cart')) || [];
     }
-  }
-const Cart = ({products}) => {
-
     let sum = 0;
     products && products.map(product => (
             sum += parseInt(product.on_sale==false ? product.price : product.sale_price)
