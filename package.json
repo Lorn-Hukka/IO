@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",
-    "start": "next start -p 3000"
+    "start": "next start -p 3000",
+    "test": "jest --watchAll"
   },
   "dependencies": {
     "@headlessui/react": "^1.4.1",
@@ -18,9 +19,12 @@
     "sharp": "^0.29.2"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
     "autoprefixer": "^10.3.7",
     "eslint": "7.32.0",
     "eslint-config-next": "12.0.1",
+    "jest": "^27.4.7",
     "postcss": "^8.3.9",
     "tailwindcss": "^2.2.17"
   }
