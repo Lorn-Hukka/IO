@@ -25,6 +25,7 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
+    - run: npm run test --if-present
     - name: Stop PM2 SERVICE
       working-directory: /home/lorn
       shell: bash
