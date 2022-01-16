@@ -113,10 +113,11 @@ const Header = () => {
                                         </svg><span className="hidden lg:inline">Koszyk</span></a></Link>
             </nav>
             <div className="flex justify-center col-span-3 items-center">
-            <div className="rounded-full mt-3 md:-mt-7 py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer text-third border-third border-2 hover:bg-third hover:text-white transition ease-out duration-500">
             <Link href="/products"><a>
-            Zobacz nasze produkty</a></Link>
+            <div className="rounded-full mt-3 md:-mt-7 py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer text-third border-third border-2 hover:bg-third hover:text-white transition ease-out duration-500">
+            Zobacz nasze produkty
             </div>
+            </a></Link>
             </div>
                         
 

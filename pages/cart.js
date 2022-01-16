@@ -4,10 +4,12 @@ const { default: CartItem } = require("@components/CartItem");
 
 const Cart = () => {
   let products = []
+  
   if (typeof window !== 'undefined')
     {
     products = JSON.parse(localStorage.getItem('Cart')) || [];
     }
+
     let sum = 0;
     products && products.map(product => (
             sum += parseInt(product.on_sale==false ? product.price : product.sale_price)
@@ -19,10 +21,11 @@ const Cart = () => {
             <h1 className="flex items-center justify-center md:justify-start md:ml-5 md:col-span-2 font-bold py-3 text-xl">Koszyk <span className="text-gray-500 ml-1"> ({products.length}) </span></h1>
             <div>
                 {
-                    products && products.map( product => (
-                    <CartItem key={product.slug} product={product} />
+                    products && products.map( (product, i=0) => (
+                            <CartItem key={i++} product={product}/>
                     ))
                 }
+
             </div>
             <div className="flex items-center md:items-start justify-center">
                 <div>
