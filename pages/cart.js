@@ -30,7 +30,7 @@ const Cart = () => {
             <div className="flex items-center md:items-start justify-center">
                 <div>
                     <h1 className="font-bold">Łącznie do zapłaty: {sum}</h1>
-                    <div className="rounded-full mt-3 py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer text-third border-third border-2 hover:bg-third hover:text-white transition ease-out duration-500">Przejdź do płatności</div>
+                    <button className="rounded-full mt-3 py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer text-third border-third border-2 hover:bg-third hover:text-white transition ease-out duration-500">Przejdź do płatności</button>
                 </div>
             </div>
         </div>
