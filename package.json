@@ -6,7 +6,8 @@
     "dev": "next dev -p 3000",
     "build": "next build",
     "start": "next start -p 3000",
-    "test": "jest --watchAll"
+    "test": "jest",
+    "test:ci": "jest --watchAll"
   },
   "dependencies": {
     "@headlessui/react": "^1.4.1",
