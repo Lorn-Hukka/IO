@@ -5,6 +5,7 @@ const { default: CartItem } = require("@components/CartItem");
 const Cart = () => {
   
     let products = [];
+    let listeners = [];
   
     if (typeof window !== 'undefined')
     {
@@ -17,6 +18,7 @@ const Cart = () => {
         if (typeof window !== 'undefined')
             localStorage.setItem('savedCart', JSON.stringify(products));
     }
+
     //część wzorca Memento, przywraca zapisaną zawartość koszyka
     const restore = () => 
       {
@@ -28,8 +30,64 @@ const Cart = () => {
         }
       } 
 
+      class EventManager {
+          constructor(){
+            if (typeof window !== 'undefined')
+            {
+                listeners = JSON.parse(localStorage.getItem('Listeners')) || [];
+            }
+          }
     
+          subscribe(listener) {
+                listeners.push(listener);
+                if (typeof window !== 'undefined')
+                {
+                    localStorage.setItem('Listeners', JSON.stringify(listeners));
+                }
+          }
 
+          unsubscribe(listener) {
+              let index = listeners.indexOf(listener);
+              if (index > -1) {
+                listeners.splice(index, 1);
+                if (typeof window !== 'undefined')
+                {
+                    localStorage.setItem('Listeners', JSON.stringify(listeners));
+                }
+              }   
+          }
+
+          notify(eventType, data)
+          {
+            listeners = JSON.parse(localStorage.getItem('Listeners')) || [];
+            listeners.forEach(listener => {
+                listener.update(eventType, data);
+            });
+          }
+      }
+
+      class LogListener{
+          constructor(){}
+
+          update(eventType, data) {
+            console.log(eventType + data);
+          }
+
+    }
+      class AlertListener{
+        constructor(){}
+
+        update(eventType, data) {
+          alert(eventType + data);
+        }
+
+    }
+
+    let observer = new EventManager();
+    let logger = new LogListener();
+    observer.subscribe(logger);
+    let alerts = new AlertListener();
+    observer.subscribe(alerts);
 
     let sum = 0;
     products && products.map(product => (
