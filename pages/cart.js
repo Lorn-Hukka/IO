@@ -3,12 +3,33 @@ const { default: CartItem } = require("@components/CartItem");
 
 
 const Cart = () => {
-  let products = []
   
-  if (typeof window !== 'undefined')
+    let products = [];
+  
+    if (typeof window !== 'undefined')
     {
     products = JSON.parse(localStorage.getItem('Cart')) || [];
     }
+
+    const makeBackup = () =>
+    {
+        if (typeof window !== 'undefined')
+            localStorage.setItem('savedCart', JSON.stringify(products));
+        console.log(products);
+    }
+
+    const restore = () => 
+      {
+        if (typeof window !== 'undefined')
+        {
+            products = JSON.parse(localStorage.getItem('savedCart')) || [];
+            localStorage.setItem('Cart', JSON.stringify(products));
+        }
+        console.log(products);
+      } 
+
+    
+
 
     let sum = 0;
     products && products.map(product => (
@@ -30,7 +51,9 @@ const Cart = () => {
             <div className="flex items-center md:items-start justify-center">
                 <div>
                     <h1 className="font-bold">Łącznie do zapłaty: {sum}</h1>
-                    <button className="rounded-full mt-3 py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer text-third border-third border-2 hover:bg-third hover:text-white transition ease-out duration-500">Przejdź do płatności</button>
+                    <button className="rounded-full mt-3 py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer text-third border-third border-2 hover:bg-third hover:text-white transition ease-out duration-500">Przejdź do płatności</button><br/>
+                    <button onClick={() => makeBackup()} className="rounded-full mt-3 py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer text-third border-third border-2 hover:bg-third hover:text-white transition ease-out duration-500">Zapisz koszyk</button><br/>
+                    <button onClick={() => restore()} className="rounded-full mt-3 py-2 px-3 uppercase text-xs font-bold tracking-wider cursor-pointer text-third border-third border-2 hover:bg-third hover:text-white transition ease-out duration-500">Wczytaj zapisany koszyk</button>
                 </div>
             </div>
         </div>
