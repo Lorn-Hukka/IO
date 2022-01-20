@@ -11,21 +11,21 @@ const Cart = () => {
     products = JSON.parse(localStorage.getItem('Cart')) || [];
     }
 
+    //część wzorca Memento, tworzy kopie aktualnego koszyka
     const makeBackup = () =>
     {
         if (typeof window !== 'undefined')
             localStorage.setItem('savedCart', JSON.stringify(products));
-        console.log(products);
     }
-
+    //część wzorca Memento, przywraca zapisaną zawartość koszyka
     const restore = () => 
       {
-        if (typeof window !== 'undefined')
+        let test = JSON.parse(localStorage.getItem('savedCart')) || [];
+        if (typeof window !== 'undefined' && test.length!=0)
         {
             products = JSON.parse(localStorage.getItem('savedCart')) || [];
             localStorage.setItem('Cart', JSON.stringify(products));
         }
-        console.log(products);
       } 
 
     
