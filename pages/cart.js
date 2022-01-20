@@ -6,7 +6,7 @@ const Cart = () => {
   
     let products = [];
     let listeners = [];
-  
+
     if (typeof window !== 'undefined')
     {
     products = JSON.parse(localStorage.getItem('Cart')) || [];
@@ -17,6 +17,7 @@ const Cart = () => {
     {
         if (typeof window !== 'undefined')
             localStorage.setItem('savedCart', JSON.stringify(products));
+        observer.notify('Zapisanie koszyka', '');
     }
 
     //część wzorca Memento, przywraca zapisaną zawartość koszyka
@@ -27,39 +28,28 @@ const Cart = () => {
         {
             products = JSON.parse(localStorage.getItem('savedCart')) || [];
             localStorage.setItem('Cart', JSON.stringify(products));
+            observer.notify('Wczytanie koszyka', '');
         }
       } 
 
+      //Observer
       class EventManager {
-          constructor(){
-            if (typeof window !== 'undefined')
-            {
-                listeners = JSON.parse(localStorage.getItem('Listeners')) || [];
-            }
+          constructor(){  
           }
     
           subscribe(listener) {
                 listeners.push(listener);
-                if (typeof window !== 'undefined')
-                {
-                    localStorage.setItem('Listeners', JSON.stringify(listeners));
-                }
           }
 
           unsubscribe(listener) {
               let index = listeners.indexOf(listener);
               if (index > -1) {
                 listeners.splice(index, 1);
-                if (typeof window !== 'undefined')
-                {
-                    localStorage.setItem('Listeners', JSON.stringify(listeners));
-                }
               }   
           }
 
           notify(eventType, data)
           {
-            listeners = JSON.parse(localStorage.getItem('Listeners')) || [];
             listeners.forEach(listener => {
                 listener.update(eventType, data);
             });
@@ -88,6 +78,7 @@ const Cart = () => {
     observer.subscribe(logger);
     let alerts = new AlertListener();
     observer.subscribe(alerts);
+    //
 
     let sum = 0;
     products && products.map(product => (
