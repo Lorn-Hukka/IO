@@ -1,6 +1,12 @@
 const Custom404 = () => {
     return (
-        <h1>Błąd 404, nie znaleziono strony</h1>
+        <div className="flex items-center">
+            <div className="container mx-auto">
+                <div className="max-w-md mx-auto">
+                    <h1 className="text-5xl">Błąd 404, nie znaleziono strony</h1>
+                </div>
+            </div>
+        </div>
       );
 }
  
