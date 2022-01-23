@@ -31,4 +31,24 @@ describe('Koszyk', () => {
     
         expect(button).toBeInTheDocument()
       });
+
+      it('Powinien posiadać przycisk służący do zapisania koszyka', () => {
+        render(<Cart />)
+    
+        const button = screen.getByRole('button', {
+          name: /ZAPISZ KOSZYK/i,
+        })
+    
+        expect(button).toBeInTheDocument()
+      });
+
+      it('Powinien posiadać przycisk służący do wczytania koszyka', () => {
+        render(<Cart />)
+    
+        const button = screen.getByRole('button', {
+          name: /WCZYTAJ ZAPISANY KOSZYK/i,
+        })
+    
+        expect(button).toBeInTheDocument()
+      });
 })
