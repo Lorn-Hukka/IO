@@ -37,6 +37,7 @@ Specyfikacja ta ma na celu przedstawienie funkcji i technologii wykorzystanej do
 |  v.1.0.0  | Utworzenie tej specyfikacji        |
 |  v.1.0.1  | Poprawa nazwy specyfikacji         | 
 |  v.1.1.0  | Specyfikacja końcowa               | 
+|  v.1.1.1  | Dopisanie odpowiedzialnych za funkcjonalności | 
 
 ### Słownik Pojęć:
 
@@ -88,29 +89,29 @@ Posiadanie konta umożliwi użytkownikowi dostęp do historii swoich zamówień,
 - *Zakup produktu:*
   - *Wybór miejsca wysyłki*
   - *Sposobu płatności*
-- **Możliwość wyświetlenia, sortowania i obserwowania oferty**
-- **Koszyk z produktami klienta**
-- **Kontakt ze sprzedającym**
+- **Możliwość wyświetlenia, sortowania i obserwowania oferty**  (Wojciech Kasolik, Błażej Mrzygłód)
+- **Koszyk z produktami klienta**  (Błażej Mrzygłód)
+- **Kontakt ze sprzedającym**  (Wojciech Kasolik, Radosław Koczur, Błażej Mrzygłód)
 - *Historia zamówień*
-- **Możliwość wystawienia opinii**
+- **Możliwość wystawienia opinii**  (Wojciech Kasolik)
 
 ### Wymagania niefunkcjonalne
-- **Możliwośc obsługi na telefonie**
-- **Bezpieczeństwo użytkowników - (Certyfikat SSL)**
-- **Modern Design**
-- **Modularność systemu**
-- **Bezawaryjność (SLA)**
-- **Łatwy w obsłudze (Intuicyjny)**
-- **Integralność danych**
-- **Podział odpowiedzialności systemów**
-- **Wysoki Test Coverage**
+- **Możliwośc obsługi na telefonie**  (Radosław Koczur, Błażej Mrzygłód)
+- **Bezpieczeństwo użytkowników - (Certyfikat SSL)**  (Wojciech Kasolik)
+- **Modern Design**  (Wojciech Kasolik, Radosław Koczur, Błażej Mrzygłód)
+- **Modularność systemu**  (Wojciech Kasolik, Radosław Koczur, Błażej Mrzygłód)
+- **Bezawaryjność (SLA)**  (Wojciech Kasolik, Radosław Koczur, Błażej Mrzygłód)
+- **Łatwy w obsłudze (Intuicyjny)**  (Wojciech Kasolik, Radosław Koczur, Błażej Mrzygłód)
+- **Integralność danych**  (Wojciech Kasolik, Błażej Mrzygłód)
+- **Podział odpowiedzialności systemów**  (Wojciech Kasolik, Radosław Koczur, Błażej Mrzygłód)
+- **Wysoki Test Coverage**  (Wojciech Kasolik, Radosław Koczur, Błażej Mrzygłód)
 
 ### Cechy systemu
-- **Stabilny**
-- **Bezpieczny**
-- **Skalowalny**
-- **Odporny na awartie**
-- **Automatyczny Deployment**
+- **Stabilny**  (Wojciech Kasolik, Radosław Koczur, Błażej Mrzygłód)
+- **Bezpieczny**  (Wojciech Kasolik, Radosław Koczur, Błażej Mrzygłód)
+- **Skalowalny**  (Wojciech Kasolik, Radosław Koczur, Błażej Mrzygłód)
+- **Odporny na awartie**  (Wojciech Kasolik, Radosław Koczur, Błażej Mrzygłód)
+- **Automatyczny Deployment** (Wojciech Kasolik, Radosław Koczur, Błażej Mrzygłód)
 
 ### Opis architektury i technologii:
 
