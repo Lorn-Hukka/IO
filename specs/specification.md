@@ -1,7 +1,7 @@
 # Specyfikacja wymagań projektu - Sklep Pasjonatów Fantastyki
 
 ## Spis treści:
-- [Specyfikacja wymagań projektu - Sklep Pajonatów Fantastyki](#specyfikacja-wymagań-projektu---sklep-pajonatów-fantastyki)
+- [Specyfikacja wymagań projektu - Sklep Pasjonatów Fantastyki](#specyfikacja-wymagań-projektu---sklep-pasjonatów-fantastyki)
   - [Spis treści:](#spis-treści)
   - [Wstęp](#wstęp)
     - [Autorzy:](#autorzy)
@@ -9,6 +9,7 @@
     - [Słownik Pojęć:](#słownik-pojęć)
   - [Cel](#cel)
   - [Cechy systemu i wymagania](#cechy-systemu-i-wymagania)
+        - [(Kursywą zostały oznaczone funkcje jeszcze nie zrealizowane, a zrealizowane zostały pogrubion.)](#kursywą-zostały-oznaczone-funkcje-jeszcze-nie-zrealizowane-a-zrealizowane-zostały-pogrubion)
     - [Wymagania funkcjonalne:](#wymagania-funkcjonalne)
       - [Strona Sprzedająca (Sprzedawca / Administrator):](#strona-sprzedająca-sprzedawca--administrator)
       - [Strona Kupująca (Klient / Użytkownik):](#strona-kupująca-klient--użytkownik)
@@ -34,7 +35,8 @@ Specyfikacja ta ma na celu przedstawienie funkcji i technologii wykorzystanej do
 | Wersja    | Zmiany                             |
 |-----------|------------------------------------|
 |  v.1.0.0  | Utworzenie tej specyfikacji        |
-|  v.1.0.1  | Poprawa nazwy specyfikacji       | 
+|  v.1.0.1  | Poprawa nazwy specyfikacji         | 
+|  v.1.1.0  | Specyfikacja końcowa               | 
 
 ### Słownik Pojęć:
 
@@ -63,49 +65,52 @@ Posiadanie konta umożliwi użytkownikowi dostęp do historii swoich zamówień,
 
 ---
 
+##### (Kursywą zostały oznaczone funkcje jeszcze nie zrealizowane, a zrealizowane zostały pogrubion.)
+
 ### Wymagania funkcjonalne:
 
 #### Strona Sprzedająca (Sprzedawca / Administrator):
-- Wystawienie produktu/oferty
-- Edycja wcześniej wystawionych ofert
-  - Zwyczajnych
-  - Promocyjnych
-- Podgląd złożonych zamówień
-- Zarządzanie złożonymi zamówieniami
-  - Możliwość oznaczenia ich jako:
-    - zrealizowane
-    - anulowane
-    - zmodyfikowane
-    - w trakcie
-- Możliwość kontaktu z klientem
+- *Wystawienie produktu/oferty*
+- *Edycja wcześniej wystawionych ofert*
+  - *Zwyczajnych*
+  - *Promocyjnych*
+- *Podgląd złożonych zamówień*
+- *Zarządzanie złożonymi zamówieniami*
+  - *Możliwość oznaczenia ich jako:*
+    - *zrealizowane*
+    - *anulowane*
+    - *zmodyfikowane*
+    - *w trakcie*
+- *Możliwość kontaktu z klientem*
 
 #### Strona Kupująca (Klient / Użytkownik):
 
-- Zakup produktu:
-  - Wybór miejsca wysyłki
-  - Sposobu płatności
-- Możliwość wyświetlenia, sortowania i obserwowania oferty
-- Koszyk z produktami klienta
-- Kontakt ze sprzedającym
-- Historia zamówień
-- Możliwość wystawienia opinii
+- *Zakup produktu:*
+  - *Wybór miejsca wysyłki*
+  - *Sposobu płatności*
+- **Możliwość wyświetlenia, sortowania i obserwowania oferty**
+- **Koszyk z produktami klienta**
+- **Kontakt ze sprzedającym**
+- *Historia zamówień*
+- **Możliwość wystawienia opinii**
 
 ### Wymagania niefunkcjonalne
-- Możliwośc obsługi na telefonie
-- Bezpieczeństwo użytkowników
-- Modern Design
-- Modularność systemu
-- Bezawaryjność (SLA)
-- Łatwy w obsłudze (Intuicyjny)
-- Integralność danych
-- Podział odpowiedzialności systemów
+- **Możliwośc obsługi na telefonie**
+- **Bezpieczeństwo użytkowników - (Certyfikat SSL)**
+- **Modern Design**
+- **Modularność systemu**
+- **Bezawaryjność (SLA)**
+- **Łatwy w obsłudze (Intuicyjny)**
+- **Integralność danych**
+- **Podział odpowiedzialności systemów**
+- **Wysoki Test Coverage**
 
 ### Cechy systemu
-- Stabilny
-- Bezpieczny
-- Skalowalny
-- Odporny na awartie
-- Automatyczny Deployment
+- **Stabilny**
+- **Bezpieczny**
+- **Skalowalny**
+- **Odporny na awartie**
+- **Automatyczny Deployment**
 
 ### Opis architektury i technologii:
 
@@ -121,8 +126,10 @@ Do budowy i poprwanego funkcjonowania systemu zostaną wykorzystane nastepujące
 - [PayPal](https://www.paypal.com/pl/home) / [Stripe](https://stripe.com/en-pl) - Zewnętrzni dostawcy obsługujący Płatności
 - [Docker](https://www.docker.com/) - Konteneryzacja 
 - [Nginx](https://www.nginx.com/) - Proxy, Load-Balancing
+- [JEST](https://jestjs.io/) - Testy jednostkowe
+- [Cypress](https://www.cypress.io/) - Testy integracyjne
 
 
 #### Schematy
-Przykładowa architektura aplikacji:
+Finalna architektura aplikacji:
 ![Architektura](https://cms.spfcentaur.pl/uploads/schemat_f98c3ef214.png)
